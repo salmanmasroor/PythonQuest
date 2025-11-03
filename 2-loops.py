@@ -26,6 +26,13 @@ def fibonacci(n: int) -> list:
         result.append(c)
     return result
 
+def sum_digits(digit: int) -> int:
+    sum = 0
+    while digit > 0:
+        sum += digit % 10
+        digit = digit // 10
+
+    return sum 
 if __name__ == "__main__":
     
     n = int(input("Enter the number for iterate: "))
@@ -33,3 +40,6 @@ if __name__ == "__main__":
 
     n = int(input("Enter the number for iterate for Fibonacci sequence: "))
     print(fibonacci(n))
+
+    n = int(input("Enter the digt for sum: "))
+    print(sum_digits(n))
