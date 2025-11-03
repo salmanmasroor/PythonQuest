@@ -31,8 +31,20 @@ def sum_digits(digit: int) -> int:
     while digit > 0:
         sum += digit % 10
         digit = digit // 10
+    return sum
 
-    return sum 
+def reverse_list(no_list: list) -> list:
+    start = 0
+    end = len(no_list) - 1
+    while start < end:
+        temp = no_list[start]
+        no_list[start] = no_list[end]
+        no_list[end] = temp
+
+        start += 1 
+        end -= 1
+    return no_list
+
 if __name__ == "__main__":
     
     n = int(input("Enter the number for iterate: "))
@@ -43,3 +55,7 @@ if __name__ == "__main__":
 
     n = int(input("Enter the digt for sum: "))
     print(sum_digits(n))
+
+    a = [12,23,34,3,12]
+    print(reverse_list(a))
+
