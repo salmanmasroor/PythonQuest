@@ -24,4 +24,12 @@ def palindrome(input_str: str) -> bool:
 def palindrome_v2(input_str: str) -> bool:
     return input_str == input_str[::-1]
 
-print(palindrome_v2("aba"))  # Output: cba
+def count_vowels(input_str: str) -> int:
+    vowels = ['a','i','e','o','u']
+    count = 0
+    for i in range(len(input_str)):
+        if input_str[i] in vowels:
+            count +=1
+    return count
+
+print(count_vowels("eulogia"))
