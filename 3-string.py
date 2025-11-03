@@ -21,5 +21,7 @@ def palindrome(input_str: str) -> bool:
     else:
         return False
 
+def palindrome_v2(input_str: str) -> bool:
+    return input_str == input_str[::-1]
 
-print(palindrome("aba"))  # Output: cba
+print(palindrome_v2("aba"))  # Output: cba
