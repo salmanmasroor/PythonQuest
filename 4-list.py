@@ -12,5 +12,19 @@ def merge_list_remove_duplicates_v2(list1: list, list2: list) -> list:
             merged.append(item)
     return merged
 
+# Find the second largest number in a list
+def second_large_number(list1: list) -> int:
+    list1.sort()
+    length = len(list1)-1
+    return list1[length-2]
 
-print(merge_list_remove_duplicates_v2([1,2,3,4,5],[2,3,4,5,6]))
+def second_large_number_without_sort(list1: list) -> int:
+    new_list = list1.copy()
+    index = new_list.index(max(new_list))
+    new_list.pop(index)
+    return max(new_list)
+
+abc =[12,23,43,213,5,21]
+print(second_large_number_without_sort(abc))
+print(abc)
+
