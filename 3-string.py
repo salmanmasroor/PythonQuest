@@ -64,4 +64,19 @@ def frequent_char_in_string(text: str):
         if value == max_value:
             return key,value
 
-print(frequent_char_in_string("aabbbc"))
+def reverse_word(text: str) -> str:
+    sentance = text.split()
+    start = 0
+    end = len(sentance) - 1
+    while start < end:
+        temp = sentance[start]
+        sentance[start] = sentance[end]
+        sentance[end] = temp
+        
+        start += 1
+        end -= 1
+    
+    reverse = " ".join(sentance)
+    return reverse
+
+
