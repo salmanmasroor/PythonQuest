@@ -24,7 +24,5 @@ def second_large_number_without_sort(list1: list) -> int:
     new_list.pop(index)
     return max(new_list)
 
-abc =[12,23,43,213,5,21]
-print(second_large_number_without_sort(abc))
-print(abc)
+
 
