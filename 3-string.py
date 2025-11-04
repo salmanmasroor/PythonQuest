@@ -6,7 +6,6 @@ def palindrome(input_str: str) -> bool:
     end = len(chars) - 1
 
     while start < end:
-        # Swap characters
         temp = chars[start]
         chars[start] = chars[end]
         chars[end] = temp
@@ -14,7 +13,6 @@ def palindrome(input_str: str) -> bool:
         start += 1
         end -= 1
 
-    # Convert list back to string
     reversed_str = ''.join(chars)
     if(input_str == reversed_str):
         return True
@@ -52,4 +50,18 @@ def remove_duplicate_v2(text: str) -> str:
     output = "".join(result)
     return output
 
-print(remove_duplicate_v2("aabc"))
+def frequent_char_in_string(text: str):
+    result = {}
+    for i in text:
+        if i not in result:
+            result[i] = 1
+        elif i in result:
+            count = result[i] + 1
+            result[i] = count
+    
+    max_value = max(result.values())
+    for key,value in result.items():
+        if value == max_value:
+            return key,value
+
+print(frequent_char_in_string("aabbbc"))
