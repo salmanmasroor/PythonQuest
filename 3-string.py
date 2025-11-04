@@ -32,4 +32,24 @@ def count_vowels(input_str: str) -> int:
             count +=1
     return count
 
-print(count_vowels("eulogia"))
+def remove_duplicate(text: str) -> str:
+    char = list(text)
+    present = []
+    for i in char:
+        for j in char:
+            if i == j:
+                if i not in present:
+                    present.append(i)
+    new_string = "".join(present)
+    return new_string
+
+def remove_duplicate_v2(text: str) -> str:
+    result = []
+    for char in text:
+        if char not in result:
+            result.append(char)
+    
+    output = "".join(result)
+    return output
+
+print(remove_duplicate_v2("aabc"))
