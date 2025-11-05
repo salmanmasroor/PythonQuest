@@ -19,7 +19,7 @@ def fibonacci(n: int) -> list:
     a = 0
     b = 1
     result = [a,b]
-    for i in range(n-2):
+    for _ in range(n-2): # i not in use then use _
         c  = a + b
         a = b
         b = c
